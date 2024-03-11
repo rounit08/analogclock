@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(60, 19, 60);
+  width: 100vw;
+}
+
+.clock {
+  height: 300px;
+  width: 300px;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/366/560/original/retro-background-vector.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 21px 21px 91px #270c27, -21px -21px 91px #511a51;
+}
+.clock::before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 5px;
+  background-color: black;
+  border-radius: 50%;
+  border: 5px double orange;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -45%);
+  z-index: 1;
+}
+
+.clock__face {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.clock__face-mark {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+}
+
+.clock__hand {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+}
+
+.clock__hand-body {
+  background-color: yellow;
+  width: 8px;
+  position: absolute;
+  top: 12%;
+  bottom: 44%;
+}
+
+.clock__hand-body--hour {
+  top: 24%;
+}
+.clock__hand-body--second {
+  width: 5px;
+  top: 17%;
+  background-color: black;
+}
